@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>自测表</title>
+    <style type="text/css">
+			.cl{color: blue;
+  			    font-size: 20px;
+			}
+			.ff{
+				font-size: 20px;
+			}
+			.bg{
+				font-size: 21px;
+			}
+			body{
+				 margin: auto;
+				 text-align: center;
+				background-image: url(../static/img/3.png);}
+
+    </style>
+
+</head>
+<body >
+<p>
+<h1>抑郁症检测表</h1></p>
+
+<p class="ff">根据过去2周的情况，请您回答是否存在下列描述的情况及频率，请看清楚问题后选择符合您情况的选项。</p>
+<div>
+    <form action="/calculate_score" method="post">
+        <table border="1" width="70%" bgcolor="beige" align="center">
+            <tr>
+                <td>&nbsp;&nbsp;1.做事时提不起劲或没有兴趣。</td>
+                <td>
+                    <input type="radio" name="t1" value="4"/>持续
+                    <input type="radio" name="t1" value="3"/>经常
+                    <input type="radio" name="t1" value="2"/>一般
+                    <input type="radio" name="t1" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;2.感到心情低落、沮丧或绝望。</td>
+                <td>
+                    <input type="radio" name="t2" value="4"/>持续
+                    <input type="radio" name="t2" value="3"/>经常
+                    <input type="radio" name="t2" value="2"/>一般
+                    <input type="radio" name="t2" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;3.入睡困难、睡不安稳或睡眠过多。</td>
+                <td>
+                    <input type="radio" name="t3" value="4"/>持续
+                    <input type="radio" name="t3" value="3"/>经常
+                    <input type="radio" name="t3" value="2"/>一般
+                    <input type="radio" name="t3" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;4.感觉疲倦或没有活力。</td>
+                <td>
+                    <input type="radio" name="t4" value="4"/>持续
+                    <input type="radio" name="t4" value="3"/>经常
+                    <input type="radio" name="t4" value="2"/>一般
+                    <input type="radio" name="t4" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;5.食欲不振或吃太多。</td>
+                <td>
+                    <input type="radio" name="t5" value="4"/>持续
+                    <input type="radio" name="t5" value="3"/>经常
+                    <input type="radio" name="t5" value="2"/>一般
+                    <input type="radio" name="t5" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;6.觉得自己很糟或觉得自己很失败，或让自己和家人失望。</td>
+                <td>
+                    <input type="radio" name="t6" value="4"/>持续
+                    <input type="radio" name="t6" value="3"/>经常
+                    <input type="radio" name="t6" value="2"/>一般
+                    <input type="radio" name="t6" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;7.对事物专注有困难，例如阅读报纸或看电视时。</td>
+                <td>
+                    <input type="radio" name="t7" value="4"/>持续
+                    <input type="radio" name="t7" value="3"/>经常
+                    <input type="radio" name="t7" value="2"/>一般
+                    <input type="radio" name="t7" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;&nbsp;8.动作或说话速度缓慢到别人已经察觉;或正好相反一一烦躁或坐立不安动来动去的情况更胜于平常。
+                </td>
+                <td>
+                    <input type="radio" name="t8" value="4"/>持续
+                    <input type="radio" name="t8" value="3"/>经常
+                    <input type="radio" name="t8" value="2"/>一般
+                    <input type="radio" name="t8" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;9.有不如死掉或用某种方式伤害自己的念头。</td>
+                <td>
+                    <input type="radio" name="t9" value="4"/>持续
+                    <input type="radio" name="t9" value="3"/>经常
+                    <input type="radio" name="t9" value="2"/>一般
+                    <input type="radio" name="t9" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;10.我比平常容易生气激动。</td>
+                <td>
+                    <input type="radio" name="t10" value="4"/>持续
+                    <input type="radio" name="t10" value="3"/>经常
+                    <input type="radio" name="t10" value="2"/>一般
+                    <input type="radio" name="t10" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;11.我觉得作出决定是困难的。</td>
+                <td>
+                    <input type="radio" name="t11" value="4"/>持续
+                    <input type="radio" name="t11" value="3"/>经常
+                    <input type="radio" name="t11" value="2"/>一般
+                    <input type="radio" name="t11" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;12.我觉得自己是个没有用的人，没有人需要我。</td>
+                <td>
+                    <input type="radio" name="t12" value="4"/>持续
+                    <input type="radio" name="t12" value="3"/>经常
+                    <input type="radio" name="t12" value="2"/>一般
+                    <input type="radio" name="t12" value="1"/>很少
+                </td>
+            </tr>
+            <td>&nbsp;&nbsp;13.我感觉生活过得没有意思。</td>
+            <td>
+                <input type="radio" name="t13" value="4"/>持续
+                <input type="radio" name="t13" value="3"/>经常
+                <input type="radio" name="t13" value="2"/>一般
+                <input type="radio" name="t13" value="1"/>很少
+            </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;14.我认为如果我死了别人会生活得更好些。</td>
+                <td>
+                    <input type="radio" name="t14" value="4"/>持续
+                    <input type="radio" name="t14" value="3"/>经常
+                    <input type="radio" name="t14" value="2"/>一般
+                    <input type="radio" name="t14" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;15.平常感兴趣的事我不再感兴趣。</td>
+                <td>
+                    <input type="radio" name="t15" value="4"/>持续
+                    <input type="radio" name="t15" value="3"/>经常
+                    <input type="radio" name="t15" value="2"/>一般
+                    <input type="radio" name="t15" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;16.是否对任何事感到自责。</td>
+                <td>
+                    <input type="radio" name="t16" value="4"/>持续
+                    <input type="radio" name="t16" value="3"/>经常
+                    <input type="radio" name="t16" value="2"/>一般
+                    <input type="radio" name="t16" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;17.我坐立不安，难以保持平静。</td>
+                <td>
+                    <input type="radio" name="t17" value="4"/>持续
+                    <input type="radio" name="t17" value="3"/>经常
+                    <input type="radio" name="t17" value="2"/>一般
+                    <input type="radio" name="t17" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;18.我要哭或想哭。</td>
+                <td>
+                    <input type="radio" name="t18" value="4"/>持续
+                    <input type="radio" name="t18" value="3"/>经常
+                    <input type="radio" name="t18" value="2"/>一般
+                    <input type="radio" name="t18" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;19.我比平常更容易感到愤怒。</td>
+                <td>
+                    <input type="radio" name="t19" value="4"/>持续
+                    <input type="radio" name="t19" value="3"/>经常
+                    <input type="radio" name="t19" value="2"/>一般
+                    <input type="radio" name="t19" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;20.我对未来感觉到没有希望。</td>
+                <td>
+                    <input type="radio" name="t20" value="4"/>持续
+                    <input type="radio" name="t20" value="3"/>经常
+                    <input type="radio" name="t20" value="2"/>一般
+                    <input type="radio" name="t20" value="1"/>很少
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <br>
+</div>
+</body>
+</html>

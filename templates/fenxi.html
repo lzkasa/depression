@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>xinxi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/1.css',_external=True) }}">
+    <style type="text/css">
+			.bj{
+				background-color: aqua;
+			}
+			
+			.ah{
+				display: block;
+							}
+			.27{
+				margin-top: 20px;
+			}
+			.07{
+				margin-top: 0;
+			}
+			#666{
+				width: 200px;
+				height: 200px;
+				float: left;
+			}
+			
+
+
+
+
+    </style>
+</head>
+<body>
+<p class="27" style="color: deepskyblue;" align="center"><img src="{{ url_for('static', filename='img/780.jpg') }}"
+                                                              alt="My Image" width="4%"><font size="6" color="">如果不开心的话，就看一下下面的视频跟漫画吧<img
+        src="{{ url_for('static', filename='img/780.jpg') }}" alt="My Image" width="4%"></font></p>
+<div id="tu" class="slidershow middle">
+    <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+
+        <div class="slide s1">
+            <img src="{{ url_for('static', filename='img/11.jpg') }}" alt="My Image">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='img/12.jpg') }}" alt="My Image">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='img/13.jpg') }}" alt="My Image">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='img/16.jpg') }}" alt="My Image">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='img/17.jpg') }}" alt="My Image">
+        </div>
+
+    </div>
+    <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+        <label for="r5" class="bar"></label>
+
+    </div>
+
+
+</div>
+
+<div id="" class="07">
+    <p style="color: deepskyblue" align="center"><font size="5" color="">(点击漫画下方的绿色方框可进行换页)<br>😊记得要开心😊</font><br><br><br><br><br>
+    </p>
+    <video src="{{ url_for('static', filename='img/1.mp4') }}" width="380px" height="" controls="controls"
+           style="margin-top: -10px; margin-left: 20px;"></video>
+    <br><br><br><br>
+    <video src="{{ url_for('static', filename='img/2.mp4') }}" width="380px" height="" controls="controls"
+           style=" margin-left: 20px;"></video>
+    <br><br>
+</div>
+<p align="center" style="color: deepskyblue;"><span class="bj" style="width: 1600px;"><font size="5" color="black">
+		  请在下方填写信息进行分析</font></span></p><br><br>
+<div id="666">
+    <form action="/calculate_score/zz" method="POST">
+        <table border="1" width="60%" bgcolor="antiquewhite" align="center" class="ah">
+            <tr>
+                <td>
+                    <div id=" " align="left" style="width: 433px;">
+                        <label for="name">您的名字<font color="red">*</font><br></label>
+                        <input type="text" id="name" name="name" style="width: 200px; height: 25px;"
+                               placeholder="请输入姓名"/><br>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 433px;">
+                        <label for="phone">您的联系方式<font color="red">*</font><br></label>
+                        <input type="text" id="phone" name="phone" style="width: 200px;height: 25px;"
+                               placeholder="请输入手机号"/>&nbsp;<br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div align="left" style="width: 433px;">
+                        <label for="score">您的得分<font color="red">*</font><br></label>
+                        <p type="text" id="score" name="score" style="width: 200px; height: 25px;"/> {{ score }}</p><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="jieshao">个人状况<font color="red">*</font><br></label>
+                    <textarea id="jieshao" name="jieshao" rows="16" cols="115"
+                              placeholder="请在此输入您的个人情况"></textarea><br>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+        </table>
+    </form>
+    {% if message %}
+    <div>{{ message }}</div>
+    {% endif %}
+</div>
+<br><br>
+
+<div class="99" style="text-align: center;">
+    <img src="{{ url_for('static', filename='img/kefu.png') }}" alt="My Image">
+    <p>热线电话: ××××××××××× </p>
+    <p>工作时间: 周一到周五9:00-18:00</p>
+    <p>办公地点: ×××市×××区×××街道×××号</p>
+</div>
+</body>
+</html>
